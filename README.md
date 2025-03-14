@@ -1,9 +1,7 @@
 # Projekt-Dokumentation
 
-☝️ Alle Text-Stellen, welche mit einem ✍️ beginnen, können Sie löschen, sobald Sie die entsprechende Stellen ausgefüllt haben.
 
-✍️ Ihr Gruppenname und Ihre Nachnamen
-
+Kamil Bielski
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
 |       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
@@ -14,10 +12,11 @@
 
 ### 1.1 Ihr Projekt
 
-✍️ Beschreiben Sie Ihr Projekt in einem griffigen Satz.
+Ein Budget-Tracker mit C#/.NET und Python: Finanzdaten erfassen, Ausgaben automatisch kategorisieren und monatliche Berichte per Skript generieren – für bessere Übersicht über Einnahmen/Ausgaben.
 
-✍️ Erklären Sie genauer in 50 bis 100 Wörtern, was genau Sie in diesem Projekt erreichen möchten, und was Sie dabei zu lernen hoffen.
+Ich entwickle eine Webanwendung, um Einnahmen und Ausgaben einfach zu verwalten. Im Kern besteht das Projekt aus einem Frontend (HTML/JavaScript) mit einem Eingabeformular für Transaktionen und einem Diagramm zur Visualisierung der Finanzdaten. Das Backend wird mit einer .NET-API umgesetzt, die alle Daten in einer SQL-Datenbank speichert. Zentral ist dabei das Testen der Verbindung zwischen Frontend und Backend – etwa ob das Formular Daten korrekt an die API sendet oder das Diagramm aktualisierte Werte anzeigt (z. B. mit Postman).
 
+Falls Zeit bleibt, erweitere ich die Anwendung um Python-Skripte, die z. B. monatliche PDF-Zusammenfassungen generieren oder automatisch Kategorien wie „Wohnen“ für Einträge wie „Miete“ erkennen.
 ### 1.2 User Stories
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
