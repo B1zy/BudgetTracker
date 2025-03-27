@@ -4,7 +4,7 @@
 Kamil Bielski
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
+|       | 0.0.1   | Webseite erstellt, Dokumentation vervollständigt |
 |       | ...     |                                                              |
 |       | 1.0.0   |                                                              |
 
@@ -18,39 +18,40 @@ Ich entwickle eine Webanwendung, um Einnahmen und Ausgaben einfach zu verwalten.
 
 Falls Zeit bleibt, erweitere ich die Anwendung um Python-Skripte, die z. B. monatliche PDF-Zusammenfassungen generieren oder automatisch Kategorien wie „Wohnen“ für Einträge wie „Miete“ erkennen.
 ### 1.2 User Stories
+| US-№ | Verbindlichkeit | Typ         | Beschreibung                                     |
+| ---- | --------------- | ---------- | ------------------------------------------------ |
+| 1    | Muss           | Funktional | Als Nutzer möchte ich neue Transaktionen erfassen, damit ich meine Ausgaben und Einnahmen im Überblick habe. |
+| 2    | Muss           | Funktional | Als Nutzer möchte ich die erfassten Transaktionen kategorisieren, damit ich meine Ausgaben pro Kategorie verfolgen kann. |
+| 3    | Kann           | Funktional | Als Nutzer möchte ich monatliche PDF-Berichte generieren, damit ich einen umfangreichen Überblick über meine Finanzen habe. |
+| 4    | Muss           | Technisch  | Als Entwickler möchte ich die Datenbankstruktur anlegen, damit Transaktionen sicher und dauerhaft gespeichert werden können. |
 
-| US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
-| ---- | --------------- | ---- | ---------------------------------- |
-| 1    |                 |      | Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️ |
-| ...  |                 |      |                                    |
 
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc.), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). Die User Story selber hat folgende Form: *Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️*.
+
+
 
 ### 1.3 Testfälle
 
-| TC-№ | Ausgangslage | Eingabe | Erwartete Ausgabe |
-| ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+| TC-№ | Ausgangslage                                   | Eingabe                        | Erwartete Ausgabe                                              |
+| ---- | ---------------------------------------------- | ----------------------------- | -------------------------------------------------------------- |
+| 1.1  | Eine neue Transaktion ist noch nicht erfasst   | "Wasserrechnung", Betrag 50   | Transaktion wird erfolgreich angelegt und in der Übersicht angezeigt. |
+| 2.1  | Mehrere vorhandene Transaktionen ohne Kategorie | Transaktion "Einkauf", Betrag 30, Kategorie "Lebensmittel" | Transaktion wird kategorisiert gespeichert, Kategorie-Kosten werden aktualisiert. |
+| 3.1  | Wenige vorhandene Transaktionen (z. B. 2-3)    | Befehl oder Button "PDF erstellen" | Monats-PDF mit korrekten Summen und Transaktionen wird generiert. |
+| 4.1  | Eine Transaktion wurde in der Webseite eingegeben | "Stromrechnung", Betrag 75       | Transaktion wird der Tabelle `Transaktionen` in der Datenbank hinzugefügt. |
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
 
-### 1.4 Diagramme
 
-✍️Fügen Sie hier ein Use Case-Diagramm mit mindestens 3 Anwendungsfällen ein; und eine Skizze davon, wie Ihre Netzseite aussehen sollte.
 
 ## 2 Planen
 
-| AP-№ | Frist | Zuständig | Beschreibung | geplante Zeit |
-| ---- | ----- | --------- | ------------ | ------------- |
-| 1.A  |       |           |              |               |
-| ...  |       |           |              |               |
+| AP-№ | Frist       | Zuständig | Beschreibung                                                           | geplante Zeit |
+| ---- | ---------- | --------- | ---------------------------------------------------------------------- | ------------- |
+| 1.A  | 31.03.2025 |kamil| Formular zur Erfassung einer neuen Transaktion anlegen                | 45'           |
+| 1.B  | 31.03.2025 |     "      | Datenbanktabelle für Transaktionen erstellen                           | 45'           |
+| 2.A  | 07.04.2025 |     "      | Kategorien-Funktion in der Datenbank und im Formular integrieren       | 45'           |
+| 2.B  | 07.04.2025 |   "        | Anzeige der kategorisierten Ausgaben im Frontend                       | 45'           |
+| 3.A  | 14.04.2025 |   "        | PDF-Generierungsfunktion mit Python-Skript implementieren              | 45'           |
+| 3.B  | 14.04.2025 | "          | Test und Validierung der PDF-Ausgabe (z. B. mit Dummy-Daten)           | 45'           |
 
-Total: 
-
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, auf die sich das Arbeitspaket bezieht, und `m` von `A` an nach oben buchstabiert. Beispiel: Das dritte Arbeitspaket, das die zweite User Story betrifft, hat also die Nummer `2.C`.
-
-✍️ Ein Arbeitspaket sollte etwa 45' für eine Person in Anspruch nehmen. Die totale Anzahl Arbeitspakete sollte etwa Folgendem entsprechen: `Anzahl R-Sitzungen` ╳ `Anzahl Gruppenmitglieder` ╳ `4`. Wenn Sie also zu dritt an einem Projekt arbeiten, für welches zwei R-Sitzungen geplant sind, sollten Sie auf `2` ╳ `3` ╳`4` = `24` Arbeitspakete kommen. Sollten Sie merken, dass Sie hier nicht genügend Arbeitspakte haben, denken Sie sich weitere "Kann"-User Stories für Kapitel 1.2 aus.
 
 
 
